@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,11 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				neon: {
+					purple: '#8B5CF6',
+					pink: '#D946EF',
+					blue: '#0EA5E9'
 				}
 			},
 			borderRadius: {
@@ -84,11 +90,39 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 10px 2px rgba(139, 92, 246, 0.4), 0 0 20px 4px rgba(139, 92, 246, 0.2)'
+					},
+					'50%': {
+						boxShadow: '0 0 15px 3px rgba(139, 92, 246, 0.6), 0 0 30px 6px rgba(139, 92, 246, 0.3)'
+					}
+				},
+				'pulse-neon': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.7'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 2s ease-in-out infinite',
+				'pulse-neon': 'pulse-neon 2s ease-in-out infinite'
+			},
+			boxShadow: {
+				'neon-purple': '0 0 5px 2px rgba(139, 92, 246, 0.7)',
+				'neon-pink': '0 0 5px 2px rgba(217, 70, 239, 0.7)',
+				'neon-blue': '0 0 5px 2px rgba(14, 165, 233, 0.7)',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'purple-glow': 'linear-gradient(90deg, hsla(277, 75%, 84%, 1) 0%, hsla(297, 50%, 51%, 1) 100%)',
+				'pink-glow': 'linear-gradient(90deg, hsla(24, 100%, 83%, 1) 0%, hsla(341, 91%, 68%, 1) 100%)',
 			}
 		}
 	},
