@@ -48,7 +48,7 @@ const Navbar = () => {
               </span>
             </Button>
           </Link>
-          <Link to="/account">
+          <Link to="/account" >
             <Button variant="ghost" size="icon" className="hover:bg-primary/20">
               <User className="h-5 w-5" />
             </Button>
